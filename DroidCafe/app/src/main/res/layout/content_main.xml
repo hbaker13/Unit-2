@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textintro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/intro_text"
+        android:textSize="@dimen/text_heading"
+        android:padding="@dimen/padding_regular"/>
+
+    <TextView
+        android:id="@+id/choose_dessert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_regular"
+        android:layout_below="@id/textintro"
+        android:text="@string/choose_a_dessert"
+        />
+
+    <ImageView
+        android:id="@+id/donut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/choose_dessert"
+        android:contentDescription="@string/donuts"
+        android:padding="@dimen/padding_regular"
+        android:src="@drawable/ic_launcher_foreground"
+        android:onClick="showDonutOrder"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_wide"
+        android:layout_below="@id/choose_dessert"
+        android:layout_toRightOf="@id/donut"
+        android:text="@string/donuts"
+        android:layout_toEndOf="@id/donut" />
+
+    <ImageView
+        android:id="@+id/ice_cream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/donut"
+        android:contentDescription="@string/ice_cream_sandwich"
+        android:padding="@dimen/padding_regular"
+        android:src="@drawable/ic_launcher_foreground"
+        android:onClick="showIceCreamOrder"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_wide"
+        android:layout_below="@id/donut"
+        android:layout_toRightOf="@id/ice_cream"
+        android:text="@string/ice_cream_sandwich"
+        android:layout_toEndOf="@id/ice_cream" />
+
+    <ImageView
+        android:id="@+id/froyo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ice_cream"
+        android:contentDescription="@string/froyo"
+        android:padding="@dimen/padding_regular"
+        android:src="@drawable/ic_launcher_foreground"
+        android:onClick="showFroyoOrder"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_wide"
+        android:layout_below="@id/ice_cream"
+        android:layout_toRightOf="@id/froyo"
+        android:text="@string/froyo"
+        android:layout_toEndOf="@id/froyo"/>
+</RelativeLayout>
